@@ -14,7 +14,8 @@ jobs:
     steps:
       - uses: "actions/checkout@v4"
 
-  tests:
+# For now just a basic build test is fine!
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: "actions/checkout@v4"
