@@ -1,5 +1,5 @@
 module(
-    name = "x_mod",
+    name = "x",
     version = "0.0.0"
 )
 
