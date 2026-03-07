@@ -1,6 +1,13 @@
 # Prerequisites
 *.d
 
+# bazel stuff
+bazel-bin
+bazel-out
+bazel-joint-media-project
+bazel-testlogs
+MODULE.bazel.lock
+
 # Compiled Object files
 *.slo
 *.lo
