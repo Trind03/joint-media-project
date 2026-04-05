@@ -1,8 +1,7 @@
-name: project_name
+name: mviconverter
 
 on:
   - pull_request
-  - push
 
 env:
   runs-on: ubuntu-latest
