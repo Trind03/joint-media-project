@@ -1,0 +1,12 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+
+cc_library(
+    name = "gui",
+# Uncomment when sources are created.
+#    srcs = glob(["*.h",
+#                 "*.cpp"],),
+    deps = ["@glfw//:glfw",
+            "@glew//:glew"],
+    visibility = ["//visibility:public"]
+)
