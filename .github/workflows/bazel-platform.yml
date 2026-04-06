@@ -1,19 +1,13 @@
-name: project_name
+name: mviconverter
 
 on:
   - pull_request
-  - push
 
 env:
   runs-on: ubuntu-latest
   BUILD_TYPE: Debug
 
 jobs:
-  Initialize-dependenies:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: "actions/checkout@v4"
-
 # For now just a basic build test is fine!
   build:
     runs-on: ubuntu-latest
@@ -22,7 +16,7 @@ jobs:
 
       - name: "Configurating dependencies"
         run: |
-          sudo apt install apt-transport-https curl gnupg -y 
+          sudo apt install apt-transport-https libgl-dev curl gnupg -y 
           curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor >bazel-archive-keyring.gpg
           sudo mv bazel-archive-keyring.gpg /usr/share/keyrings
           echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] https://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
