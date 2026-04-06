@@ -8,11 +8,6 @@ env:
   BUILD_TYPE: Debug
 
 jobs:
-  Initialize-dependenies:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: "actions/checkout@v4"
-
 # For now just a basic build test is fine!
   build:
     runs-on: ubuntu-latest
