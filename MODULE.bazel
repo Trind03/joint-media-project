@@ -3,7 +3,6 @@ bazel_dep(name = "googletest", version = "1.17.0.bcr.2")
 bazel_dep(name = "glfw", version = "3.4.0.bcr.1")
 bazel_dep(name = "glew", version = "2.3.1")
 bazel_dep(name = "opencv", version = "4.13.0.bcr.5")
-
-
+bazel_dep(name = "spdlog", version = "1.17.0")
 
 

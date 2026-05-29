@@ -1,0 +1,12 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "Image",
+    srcs = [
+        "Media_Image_Converter.h",
+        "Media_Image_Format.h",
+    ],
+    includes = ["."],
+    visibility = ["//visibility:public"],
+    deps = ["@opencv//:core"],
+)
