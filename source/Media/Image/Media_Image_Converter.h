@@ -1,19 +1,23 @@
 //
 // Created by Torstein on 27/05/2026.
 //
-#include <Media_Image_Format.h>
-#include <iostream>
-#include <type_traits>
-#include <opencv2/core.hpp>
-#include <string>
-
 #ifndef MVICONVERTER_MEDIA_IMAGECONVERTER_H
 #define MVICONVERTER_MEDIA_IMAGECONVERTER_H
+#include <concepts>
+#include <Media_Image_Format.h>
+#include <opencv2/core.hpp>
+#include <opencv2/opencv.hpp>
+
 
 namespace Media::Image::Converter
 {
-    template<typename F> requires std::is_same_v<Media::Image::Format::Formats, F>
-    void convertJpegToPng(const std::string& filePath)
+    inline void loadImgFromDisk(const std::string_view filename)
+    {
+        cv::Mat imread{filename, cv::IMREAD_UNCHANGED};
+    }
+
+
+    inline void convertImgFmt(const Format& fmt, cv::Mat& img)
     {
         // cv::Mat image = cv::imread(filePath, cv::IMREAD_COLOR);
         // if (image.empty())
@@ -21,7 +25,7 @@ namespace Media::Image::Converter
         //     std::cerr << "Could not read the image" << std::endl;
         //     return cv::Mat{};
         // }
-        std::cout << filePath << std::endl;
+        // return img;
     }
 } // Media::Converter
 
